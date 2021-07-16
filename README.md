@@ -2,5 +2,5 @@
 
 #### Swagger url
 ```bash
-http://localhost:9090/employee-service/swagger-ui/index.html
+http://localhost:8080/employee-service/swagger-ui/index.html
 ```
