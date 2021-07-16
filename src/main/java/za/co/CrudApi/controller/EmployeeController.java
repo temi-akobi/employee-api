@@ -11,8 +11,6 @@ import za.co.CrudApi.exception.EmployeeNotFoundException;
 import za.co.CrudApi.service.EmployeeService;
 
 import javax.validation.Valid;
-import java.util.ArrayList;
-import java.util.List;
 
 @RestController
 @RequestMapping("/api")
@@ -35,12 +33,11 @@ public class EmployeeController {
     @PutMapping("/updateEmployeeDetails")
     @CrossOrigin
     @ResponseBody
-    public ResponseEntity<Employee> updateEmployeeDetails( @RequestBody Employee employee) {
+    public ResponseEntity<Employee> updateEmployeeDetails(@RequestBody Employee employee) {
         Employee _employee = employeeService.updateEmployeeDetails( employee );
         return new ResponseEntity<>( _employee, HttpStatus.CREATED );
 
     }
-
 
 
     @CrossOrigin

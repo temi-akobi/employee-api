@@ -1,7 +1,6 @@
 package za.co.CrudApi.exception;
 
 
-
 import org.springframework.context.support.DefaultMessageSourceResolvable;
 import org.springframework.data.rest.webmvc.ResourceNotFoundException;
 import org.springframework.http.HttpHeaders;
@@ -13,7 +12,6 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
-import java.sql.SQLDataException;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;

@@ -13,19 +13,19 @@ import org.springframework.context.annotation.Configuration;
 public class OpenAPIConfig {
 
 
-        @Bean
-        public OpenAPI openAPI(){
-            return new OpenAPI()
-                    .components(new Components())
-                    .info(getApiInfo());
-        }
+    @Bean
+    public OpenAPI openAPI() {
+        return new OpenAPI()
+                .components( new Components() )
+                .info( getApiInfo() );
+    }
 
-        private Info getApiInfo() {
-            return new Info()
-                    .title(" Employee Application")
-                    .description("Application for downloading attachment technology.")
-                    .version("2.0.0")
-                    .contact(new Contact().name("Temi.Akobi@co.za").url("https://employee.co.za").email("info@employee.co.za"));
-        }
+    private Info getApiInfo() {
+        return new Info()
+                .title( " Employee Application" )
+                .description( "Application for downloading attachment technology." )
+                .version( "2.0.0" )
+                .contact( new Contact().name( "Temi.Akobi@co.za" ).url( "https://employee.co.za" ).email( "info@employee.co.za" ) );
+    }
 
 }
