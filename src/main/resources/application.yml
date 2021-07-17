@@ -1,7 +1,7 @@
 spring:
 
 server:
-  port: ${PORT:8080}
+  port: ${PORT:9090}
   servlet:
     context-path: /employee-service
   connection-timeout: 0
