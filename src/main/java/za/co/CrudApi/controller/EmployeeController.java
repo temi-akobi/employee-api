@@ -33,7 +33,7 @@ public class EmployeeController {
     @PutMapping("/updateEmployeeDetails")
     @CrossOrigin
     @ResponseBody
-    public ResponseEntity<Employee> updateEmployeeDetails(@RequestBody Employee employee) {
+    public ResponseEntity<Employee> updateEmployeeDetails(@Valid @RequestBody Employee employee) {
         Employee _employee = employeeService.updateEmployeeDetails( employee );
         return new ResponseEntity<>( _employee, HttpStatus.CREATED );
 

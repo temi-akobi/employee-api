@@ -65,13 +65,17 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     public Employee updateEmployeeDetails(Employee employee) {
         //Optional<Employee> searchById = employeeRepository.findById( employee.getId() );
-        if (employeeMap.containsKey( employee.getId() ) && !isIDNumberOrMobileNumberExist( employee.getIdNumber(), employee.getMobileNumber() )) {
+        if (employeeMap.containsKey( employee.getId() )) {
             Employee existingEmployee = employeeMap.get( employee.getId() );
             existingEmployee.setFirstName( employee.getFirstName() );
             existingEmployee.setLastName( employee.getLastName() );
+            if(!isIDNumberOrMobileNumberExist( employee.getIdNumber(), employee.getMobileNumber() )){
+              existingEmployee.setIdNumber( employee.getIdNumber() );
+              existingEmployee.setMobileNumber( employee.getMobileNumber() );
+            }
             existingEmployee.setPhysicalAddress( employee.getPhysicalAddress() );
             //return employeeRepository.save( existingEmployee );
-            return employeeMap.put( employee.getId(), employee );
+            return employeeMap.put( employee.getId(), existingEmployee );
         }
         throw  new EntityAlreadyExistException( String.format( "Record  already exist  for: %1$s ",  employee.getIdNumber() != null ? employee.getIdNumber() : employee.getMobileNumber()!= null ? employee.getMobileNumber() : " " ) ) ;
 

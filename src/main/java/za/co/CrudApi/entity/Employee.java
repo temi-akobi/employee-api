@@ -11,7 +11,7 @@ import javax.validation.constraints.Pattern;
 import java.io.Serializable;
 
 @Entity
-@Table(name = "Employee")
+@Table(name = "EMPLOYEE")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
