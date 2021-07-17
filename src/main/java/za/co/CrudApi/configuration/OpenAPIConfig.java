@@ -23,7 +23,7 @@ public class OpenAPIConfig {
     private Info getApiInfo() {
         return new Info()
                 .title( " Employee Application" )
-                .description( "Application for downloading attachment technology." )
+                .description( "Application for Creating,Updating and Searching For a Client technology." )
                 .version( "2.0.0" )
                 .contact( new Contact().name( "Temi.Akobi@co.za" ).url( "https://employee.co.za" ).email( "info@employee.co.za" ) );
     }
